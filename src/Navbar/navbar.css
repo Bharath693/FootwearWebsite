@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.navContainer{
+    width:100%;
+    height: 70px;
+    position: fixed;
+    /* top: 0; */
+    background-color: #4EE2Ec;  
+    padding: 0.5rem;
+    display: flex;
+    z-index: 9999;
+    
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right h1{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+.left{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.left li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    color: white;
+    padding-top: 10px;
+   
+}
+.ShoppingCart{
+    padding: 5px 15px;
+    
+}
