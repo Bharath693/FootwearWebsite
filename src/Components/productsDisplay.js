@@ -9,14 +9,19 @@ function productsDisplay(props){
                <div className="imagediv">
                    {<img src={image} />}
               </div>
-              <div className>
-              <h2>{productname}</h2>
+              <div className="productdetails">
+                 <div>
+                    <h2>{productname}</h2>
+                 </div>
+                <div className>
+                   <h4>{productprice}</h4>
+                </div>
               </div>
-              <div className>
-                <h4>{productprice}</h4>
+              <div className="btn">
+                <button>Add to cart</button>
               </div>
        </div>
-
+      
     )
 }
 export default productsDisplay;

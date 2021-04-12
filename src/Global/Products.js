@@ -27,6 +27,7 @@ return(
          return <ProductsDisplay productname={products[i].ProductName}
                                  productprice={products[i].Productprice}
                                  image={products[i].image} />
+                                 
        })}
     </div>
 )

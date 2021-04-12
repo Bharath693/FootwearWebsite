@@ -16,5 +16,28 @@
     width: 95%;
     height: 200px;
 }
-
- 
+.productdetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.btn{
+    width: 50%;
+  background: #f57224;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.btn button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    /* outline: none; */
+    cursor: pointer;
+}
