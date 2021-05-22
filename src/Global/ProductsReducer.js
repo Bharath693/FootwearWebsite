@@ -7,7 +7,7 @@ import puma from '../Assests/puma.jpg'
 import sparx from '../Assests/sparx.jpg'
 
 
-const initialisestate={
+const initialstate={
     products:[
     {id:1 , ProductName:"Addidas" , Productprice:400 ,image:addidas},
     {id:2 , ProductName:"bentlee" , Productprice:600 ,image:bentlee},
@@ -18,10 +18,10 @@ const initialisestate={
     ]
 }
 
-export function ProductsReducer(state=initialisestate , action){
-switch(action.type){
-    default:
-        return state
-}
-}
-
+// function ProductsReducer(state=initialstate , action){
+// switch(action.type){
+//     default:
+//         return [...state]
+// }
+// }
+// export default ProductsReducer
