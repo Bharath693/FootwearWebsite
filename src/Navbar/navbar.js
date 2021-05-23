@@ -16,10 +16,11 @@ function navbar(){
             </div>
             <ul className="left">
             <Link to="/cart" style={{textDecoration:"none"}}>
-                <li> Cart
+                <li> 
                     <div className="ShoppingCart">
                     <FontAwesomeIcon icon={faCartPlus} /> 
                     </div>
+                    <span></span>
                 </li>
                 </Link>
             </ul>
