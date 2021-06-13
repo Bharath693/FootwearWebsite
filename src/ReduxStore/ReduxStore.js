@@ -2,22 +2,26 @@ import {   combineReducers , applyMiddleware, createStore} from 'redux'
 import thunk from 'redux-thunk'
 import { persistReducer , persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import   ProductsReducer   from '../Global/ProductsReducer'
+// import { devToolsEnhancer } from 'redux-devtools-extension'
+import   { Products }   from '../Redux/Reducers/ProductsReducer'
+import { CartReducer } from '../Redux/Reducers/CartReducer'
 
-
- const rootReducer = combineReducers({ProductsReducer})
-
+ const rootReducer = combineReducers({
+     ProductsR: Products,
+     Cart: CartReducer
+ })
+ 
 const persistConfig = {
     key:"root",
-    storage
+    storage,
 }
 
 const persistedReducer = persistReducer(persistConfig , rootReducer)
 
-const middleWare = []
+const middleWare = [thunk]
 
-const store = createStore(persistedReducer , applyMiddleware(thunk ,...middleWare))
+export const store = createStore(persistedReducer , applyMiddleware(...middleWare))
 
-const persistedStore = persistStore(store)
+export const persistedStore = persistStore(store)
 
-export default persistedStoreRedu
+
