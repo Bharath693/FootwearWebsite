@@ -1,10 +1,25 @@
-import { Products } from "./Products-Reducer";
-import { SelectProductReducer } from "./Select-Product-Reducer";
-import { combineReducers } from "redux";
+import {   combineReducers , applyMiddleware, createStore} from 'redux'
+import thunk from 'redux-thunk'
+import { persistReducer , persistStore} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import   { Products }   from '../Redux/Reducers/ProductsReducer'
+import { CartReducer } from '../Redux/Reducers/CartReducer'
 
-const Reducer = combineReducers({
-  Products: Products,
-  SelectProduct: SelectProductReducer,
-});
+ const rootReducer = combineReducers({
+     ProductsR: Products,
+     Cart: CartReducer
+ })
+ 
+const persistConfig = {
+    key:"root",
+    storage,
+}
 
-export default Reducer;
+const persistedReducer = persistReducer(persistConfig , rootReducer)
+
+const middleWare = [thunk]
+
+export const store = createStore(persistedReducer , applyMiddleware(...middleWare))
+
+export const persistedStore = persistStore(store)
+
