@@ -26,7 +26,6 @@ function Navbar({Count}) {
       </ul>
     </nav>
   );
-}
 
 const mapStateToProps = (state) =>{
   return {Count:state.Cart}

@@ -33,13 +33,13 @@ function ProductsDisplay({ProductItems}){
               )
             })}
           </div>
-        </>
-    )
+         </>
+     )
 }
+
 
 const mapStateToProps = (state) =>{
    return {ProductItems : state.ProductsR}
    
 }
 export default connect(mapStateToProps)(ProductsDisplay)
-// export default ProductsDisplay

@@ -29,10 +29,7 @@ function Cart({CartItems}) {
   )
 }
 const mapStateToProps = (state) =>{
-
   return{CartItems :state.Cart}
 }
 
 export default connect(mapStateToProps)(Cart)
-
-// export default Cart
