@@ -14,4 +14,4 @@ export const Products = () => {
     { id: 5, ProductName: "Puma", Productprice: 300, image: puma },
     { id: 6, ProductName: "Sparx", Productprice: 450, image: sparx },
   ];
-
+}

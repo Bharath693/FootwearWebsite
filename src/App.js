@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Navbar />
-      <Carousal />
       <Route exact path="/" component={ProductsDisplay} />
       <Route exact path="/cart" component={Cart} />
       </BrowserRouter>
