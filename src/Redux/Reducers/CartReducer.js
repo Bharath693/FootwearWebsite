@@ -1,18 +1,18 @@
 import React from 'react'
-import {useSelector} from 'react-redux'
-var initialState={
+
+const initialState={
     shoppingCart:[],
-    totalprice:0,
+    totalPrice:0,
     qty:0,
-    message:''
+    Message:''
 }
-export const CartReducer = (state=initialState , action) => {
-    let {shoppingCart, totalprice, qty, message} = state
-    // console.log(shoppingCart)
-    let Product;
-    let index
+
+export const cartReducer = (state=initialState , action) => {
+    const {shoppingCart , totalPrice , qty} = state
+    let product;
     let updatedPrice;
     let updatedqty
+
     switch(action.type){
         case"ADD_TO_CART":
      let check = shoppingCart.find((cart) =>cart.id === action.id)
@@ -72,3 +72,4 @@ export const CartReducer = (state=initialState , action) => {
     return state
     }
 }
+        
