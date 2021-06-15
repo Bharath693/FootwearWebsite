@@ -4,7 +4,7 @@ import { persistReducer , persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 // import { devToolsEnhancer } from 'redux-devtools-extension'
 import   { Products }   from '../Redux/Reducers/ProductsReducer'
-import { CartReducer } from '../Redux/Reducers/CartReducer'
+import { CartReducer } from '../Redux/Reducers/cartReducer'
 
  const rootReducer = combineReducers({
      ProductsR: Products,
