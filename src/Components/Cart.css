@@ -11,8 +11,8 @@
    width:60%;
    display:flex;
    align-items: center;
-   justify-content: space-between;
-   background-color: grey;
+   /* justify-content: space-between; */
+   /* background-color: grey; */
    padding: 20px 70px
 }
 
@@ -22,6 +22,7 @@
     min-height: 80px;
     min-width: 80px;
     display: flex;
+    margin-right: 20px;
 }
 
 .image img{
@@ -31,8 +32,11 @@
 
 .productname{
     display: flex;
+    width: 200px;
 }
-
+.productprice{
+    width:100px
+}
 .icon{
     display: flex;
     font-size: 20px;
@@ -45,6 +49,15 @@
     border: 1.1px solid orangered;
     text-align: center;
     cursor: pointer;
+    margin-right: 40px;
+}
+
+.qty{
+    width: 50px;
+}
+
+.itemtotalprice{
+    width:70px
 }
 
 .Dec{
@@ -55,4 +68,5 @@
     color: rgb(247, 117, 117);
     font-size: 20px;
     cursor: pointer;
+    width: 80px;
 }

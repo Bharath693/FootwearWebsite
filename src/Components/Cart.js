@@ -16,11 +16,11 @@ function Cart({CartItems}) {
             <span className="image">{<img src={item.image} />}</span>
             {/* <span>{qty}</span> */}
             <span className="productname">{item.ProductName}</span>
-            <span>Rs {item.Productprice}.00</span>
+            <span className="productprice">Rs {item.Productprice}.00</span>
             <span className="icon" onClick={()=>dispatch({type:"INC", id:item.id , item})}>{<FontAwesomeIcon icon={faPlus} />}</span>
-            <span>{item.qty}</span>
+            <span className="qty">{item.qty}</span>
             <span className="icon Dec" onClick={() =>dispatch({type:"DEC" , id:item.id , item})}>{<FontAwesomeIcon icon={faMinus}/>}</span>
-            <span>{item.qty * item.Productprice}</span>
+            <span className="itemtotalprice">{item.qty * item.Productprice}</span>
             <span className="trash" onClick={() =>dispatch({type:"DELETE_PRODUCT" , id:item.id , item})}>{<FontAwesomeIcon icon={faTrash}/>}</span>
           </div>
         )
